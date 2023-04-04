@@ -1,0 +1,28 @@
+// カラーパレット
+$color_dark: #333 !default;
+$color_light: #fafafa !default;
+
+// 背景色
+$bg_color_base: $color_light !default;
+
+// テキストカラー
+$text_color_base: $color_dark !default;
+
+// フォントファミリー
+$font_family_serif: 'Noto Serif JP', serif !default;
+
+// フォントサイズ
+$font_size_xs: rem(12);
+$font_size_s: rem(14);
+$font_size_md: rem(16);
+$font_size_lg: rem(18);
+$font_size_xl: rem(24);
+
+// 行間
+$line_height_s: 1.15 !default;
+$line_height_md: 1.5 !default;
+$line_height_lg: 1.75 !default;
+$line_height_xl: 2 !default;
+$line_height_default: $lineHeight_middle !default;
+
+// 文字間隔

@@ -1,0 +1,11 @@
+// example - rem(24) => 1.5rem
+@function rem($fontSize) {
+  @return calc($fontSize / 16) * 1rem;
+}
+
+// hover wrapper
+@mixin hover {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}

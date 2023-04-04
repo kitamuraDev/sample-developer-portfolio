@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Welcome to Astro.">
+  <div class="container">
+    <p>Welcome to Astro.</p>
+  </div>
+</Layout>
+
+<style lang="scss">
+  .container {
+    height: 100vh;
+    width: min(100% - 5rem, 960px);
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      color: #333;
+      font-size: 2rem;
+      font-weight: 400;
+    }
+  }
+</style>
