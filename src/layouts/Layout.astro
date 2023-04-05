@@ -25,12 +25,25 @@ const { title } = Astro.props;
     <slot />
   </body>
 </html>
+
 <style is:global>
+  :root {
+    --color-primary: #0ea5e9;
+    --color-background-body: #0b1121;
+    --color-background-workbox: #112240;
+    --color-section-line: #233554;
+    --color-section-headtext: #ccd6f6;
+    --color-basetext: #8892b0;
+  }
+
   html {
     font-size: 100%;
     scroll-behavior: smooth;
   }
+
   body {
     font-family: 'Inter', sans-serif;
+    background-color: var(--color-background-body);
+    color: var(--color-basetext);
   }
 </style>
