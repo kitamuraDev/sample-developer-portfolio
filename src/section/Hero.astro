@@ -1,0 +1,75 @@
+<section class="hero">
+  <h1 class="hero__title">Hi, my name is</h1>
+  <h2 class="hero__subtitle">KitamuraDev.</h2>
+  <h3 class="hero__description">Frontend Developer.</h3>
+  <p class="hero__text">
+    Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio
+    mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus
+    urna at turpis condimentum lobortis.
+  </p>
+  <a href="/#contact" class="hero__cta" aria-label="contact">Contact Me</a>
+</section>
+
+<style lang="scss">
+  @import '../scss/main';
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: min(100%, 1024px);
+    margin-inline: auto;
+    height: 100svh;
+
+    @include mq(md) {
+      padding: 0 40px;
+    }
+    @include mq(sm) {
+      padding: 0;
+    }
+  }
+
+  .hero__title {
+    color: var(--color-primary);
+    font-size: clamp(rem(14), 5vw, rem(16));
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+  .hero__subtitle {
+    color: var(--color-section-headtext);
+    font-size: clamp(rem(32), 8vw, rem(80));
+    font-weight: 700;
+  }
+  .hero__description {
+    color: var(--color-basetext);
+    font-size: clamp(rem(32), 8vw, rem(80));
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .hero__text {
+    width: min(100%, 650px);
+    color: var(--color-basetext);
+    font-size: clamp(rem(12), 3vw, rem(18));
+    line-height: 1.5;
+    margin-bottom: 50px;
+  }
+
+  .hero__cta {
+    text-decoration: none;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    border-radius: 4px;
+    font-size: rem(14);
+    transition: var(--transition);
+    padding: 16px 28px;
+    width: 180px;
+    text-align: center;
+
+    @include hover() {
+      &:hover {
+        background-color: var(--color-primary-hover);
+      }
+    }
+  }
+</style>
