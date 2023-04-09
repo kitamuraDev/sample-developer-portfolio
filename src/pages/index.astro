@@ -6,13 +6,24 @@ import Hero from '../section/Hero.astro';
 
 <Layout title="KitamuraDev">
   <Header />
-  <main class="content">
-    <Hero />
-  </main>
+  <div id="content">
+    <main class="content">
+      <Hero />
+    </main>
+  </div>
 </Layout>
 
 <style lang="scss">
   @import '../scss/main';
+
+  // サイドバー展開時に body に blurクラス を付与
+  // body に blurクラス が付いているときに #content 直下のトップレベルの要素に対してブラーエフェクトをかける
+  body.blur #content > * {
+    filter: blur(5px) brightness(0.7);
+    transition: var(--transition);
+    pointer-events: none;
+    user-select: none;
+  }
 
   .content {
     counter-reset: section 0;
