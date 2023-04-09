@@ -1,8 +1,6 @@
 $breakpoints: (
-  // 520px以下（520pxも含む）
-  'sm': 'screen and (width <= 520px)',
-  // 768px以下（768pxも含む）
-  'md': 'screen and (width <= 768px)'
+  'sm': 'screen and (max-width: 520px)',
+  'md': 'screen and (max-width: 768px)',
 ) !default;
 
 @mixin mq($breakpoint) {
