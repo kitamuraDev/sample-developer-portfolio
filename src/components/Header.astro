@@ -274,6 +274,7 @@ import Logo from './Logo.astro';
   menuBtn.addEventListener('click', () => {
     menuBtn.classList.toggle('is-active');
     menuAside.classList.toggle('is-active');
+    document.body.classList.toggle('blur');
 
     // aside aria-hidden on/off
     if (menuAside.getAttribute('aria-hidden') === 'true') {
