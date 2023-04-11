@@ -1,0 +1,36 @@
+---
+interface Props {
+  dataNumber: string;
+}
+const { dataNumber } = Astro.props;
+---
+
+<h2 class="about__title" data-number={dataNumber}>About Me</h2>
+
+<style lang="scss">
+  @import '../scss/main';
+
+  .about__title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-section-headtext);
+    font-size: clamp(rem(24), 5vw, rem(32));
+  }
+  .about__title::before {
+    content: '0' attr(data-number) '.';
+    color: var(--color-primary);
+    font-size: clamp(rem(16), 3vw, rem(20));
+    font-weight: 400;
+  }
+  .about__title::after {
+    content: '';
+    width: 300px;
+    height: 1px;
+    background-color: var(--color-section-line);
+
+    @include mq(md) {
+      flex: 1;
+    }
+  }
+</style>
