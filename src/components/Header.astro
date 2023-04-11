@@ -284,4 +284,12 @@ import Logo from './Logo.astro';
       menuAside.setAttribute('aria-hidden', 'true');
     }
   });
+
+  // 背面タップでサイドバーを閉じる
+  const content = document.querySelector('#content');
+  content.addEventListener('click', () => {
+    menuBtn.classList.remove('is-active');
+    menuAside.classList.remove('is-active');
+    document.body.classList.remove('blur');
+  });
 </script>
