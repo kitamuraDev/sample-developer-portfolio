@@ -1,0 +1,106 @@
+---
+import SectionTitle from '../../components/SectionTitle.astro';
+import CatSmilingEyes from './emojis/CatSmilingEyes.astro';
+---
+
+<section id="about" class="about">
+  <SectionTitle dataNumber="1" sectionTitle="About Me" />
+  <div class="about__content">
+    <div class="about__paragraph">
+      <p class="about__text">
+        Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, <span
+          class="about__text--color-primary">ac aliquet odio mattis</span
+        >. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+      </p>
+      <p class="about__text">
+        Corem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet
+        odio mattis. <span class="about__text--color-primary"
+          >Class aptent taciti sociosqu ad litora torquent per conubia nostra</span
+        >, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.
+      </p>
+      <p class="about__text">
+        <span class="about__text--color-primary">Vorem ipsum dolor sit amet</span>, consectetur adipiscing elit. Nunc
+        vulputate libero et velit interdum, ac aliquet odio mattis.
+      </p>
+    </div>
+    <div class="about__image-wrapper">
+      <CatSmilingEyes />
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  @import '../../scss/main';
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: min(100%, 1024px);
+    margin-inline: auto;
+    padding: 100px 0;
+
+    @include mq(sm) {
+      padding: 60px 0;
+    }
+  }
+
+  .about__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mq(md) {
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+
+  .about__paragraph {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: min(100%, 650px);
+  }
+  .about__text {
+    color: inherit;
+    font-size: clamp(rem(12), 3vw, rem(18));
+    line-height: 1.5;
+  }
+  .about__text--color-primary {
+    color: var(--color-primary);
+  }
+
+  .about__image-wrapper {
+    width: min(60%, 300px);
+    animation: wobble 3s ease 0s infinite;
+  }
+
+  @keyframes wobble {
+    0%,
+    100% {
+      transform: translateX(0%);
+      transform-origin: 50% 50%;
+    }
+
+    15% {
+      transform: translateX(-30px) rotate(-6deg);
+    }
+
+    30% {
+      transform: translateX(15px) rotate(6deg);
+    }
+
+    45% {
+      transform: translateX(-15px) rotate(-3.6deg);
+    }
+
+    60% {
+      transform: translateX(9px) rotate(2.4deg);
+    }
+
+    75% {
+      transform: translateX(-6px) rotate(-1.2deg);
+    }
+  }
+</style>
