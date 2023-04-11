@@ -1,11 +1,12 @@
 ---
 interface Props {
   dataNumber: string;
+  sectionTitle: string;
 }
-const { dataNumber } = Astro.props;
+const { dataNumber, sectionTitle } = Astro.props;
 ---
 
-<h2 class="about__title" data-number={dataNumber}>About Me</h2>
+<h2 class="about__title" data-number={dataNumber}>{sectionTitle}</h2>
 
 <style lang="scss">
   @import '../scss/main';
