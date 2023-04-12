@@ -298,6 +298,16 @@ const menuAisde = 8;
     document.body.classList.remove('blur');
   });
 
+  // サイドバーのセクションリンクをクリック後にサイドバーを閉じる
+  const asideNavLinks = document.querySelectorAll('.aside__nav-list__item');
+  asideNavLinks.forEach((asideNavLink) => {
+    asideNavLink.addEventListener('click', () => {
+      menuBtn.classList.remove('is-active');
+      menuAside.classList.remove('is-active');
+      document.body.classList.remove('blur');
+    });
+  });
+
   // スクロールに応じてヘッダーの 表示/非表示 を制御
   let prevScrollPos = window.pageYOffset;
 
