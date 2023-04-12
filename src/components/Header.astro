@@ -1,5 +1,10 @@
 ---
 import Logo from './Logo.astro';
+
+// z-index
+const header = 10;
+const menuBtn = 9;
+const menuAisde = 8;
 ---
 
 <header class="header">
@@ -41,12 +46,12 @@ import Logo from './Logo.astro';
   </nav>
 </header>
 
-<style lang="scss">
+<style lang="scss" define:vars={{ header, menuBtn, menuAisde }}>
   @import '../scss/main';
 
   .header {
     position: fixed;
-    z-index: 10;
+    z-index: var(--header);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -131,7 +136,7 @@ import Logo from './Logo.astro';
     justify-content: center;
     align-items: center;
     position: relative;
-    z-index: 9;
+    z-index: var(--menuBtn);
     padding: 15px;
     text-transform: none;
     transition-timing-function: linear;
@@ -202,7 +207,7 @@ import Logo from './Logo.astro';
     justify-content: center;
     align-items: center;
     position: fixed;
-    z-index: 8;
+    z-index: var(--menuAisde);
     top: 0;
     right: 0;
     bottom: 0;
