@@ -82,8 +82,10 @@ const skills: Skills = [
   }
 </style>
 
-<script is:inline type="module">
-  console.log(gsap);
+<script>
+  import gsap from 'gsap';
+  import ScrollTrigger from 'gsap/ScrollTrigger';
+
   gsap.registerPlugin(ScrollTrigger);
   const progressbars = document.querySelectorAll('.progress-bar');
   progressbars.forEach((bar) => {

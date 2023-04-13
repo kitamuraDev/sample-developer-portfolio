@@ -1970,6 +1970,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gsap@npm:^3.11.5":
+  version: 3.11.5
+  resolution: "gsap@npm:3.11.5"
+  checksum: 0d62c9405ed9703f8c65e6190b648d9691fa84bd03bcde0d286cd29d80c5865c22aa57a128b33299c0c15d41473e83f13be1645700325f3821dd912a3022350d
+  languageName: node
+  linkType: hard
+
 "has-flag@npm:^3.0.0":
   version: 3.0.0
   resolution: "has-flag@npm:3.0.0"
@@ -3901,6 +3908,7 @@ __metadata:
   resolution: "sample-developer-portfolio@workspace:."
   dependencies:
     astro: ^2.0.17
+    gsap: ^3.11.5
     prettier: ^2.8.4
     prettier-plugin-astro: ^0.8.0
     sass: ^1.58.3
