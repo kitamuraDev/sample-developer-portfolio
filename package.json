@@ -10,7 +10,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.0.17"
+    "astro": "^2.0.17",
+    "gsap": "^3.11.5"
   },
   "devDependencies": {
     "prettier": "^2.8.4",
