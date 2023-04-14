@@ -42,6 +42,10 @@ const skills: Skills = [
     width: min(100%, 1024px);
     margin-inline: auto;
     padding: 100px 0;
+
+    @include mq(sm) {
+      padding: 60px 0;
+    }
   }
   .skills__container {
     display: flex;
