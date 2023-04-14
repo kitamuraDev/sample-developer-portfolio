@@ -1,0 +1,21 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">© {year}. kitamuraDev - All rights reserved.</footer>
+
+<style lang="scss">
+  @import '../scss/main';
+
+  .footer {
+    text-align: center;
+    font-size: clamp(rem(12), 3vw, rem(14));
+    font-weight: 500;
+    padding: 80px 10px;
+    color: var(--color-section-headtext);
+
+    @include mq(sm) {
+      padding: 40px 10px;
+    }
+  }
+</style>
