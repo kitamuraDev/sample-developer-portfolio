@@ -1,0 +1,97 @@
+---
+import SectionTitle from '../components/SectionTitle.astro';
+---
+
+<section id="contact" class="contact">
+  <SectionTitle dataNumber="4" sectionTitle="Contact" />
+  <form class="contact__form">
+    <div class="contact__form-group">
+      <input class="contact__form-input" type="text" name="name" placeholder="Your full name" required />
+      <input class="contact__form-input" type="email" name="email" placeholder="Your email" required />
+      <textarea class="contact__form-textarea" name="body" cols="30" rows="10" placeholder="Your message" required
+      ></textarea>
+    </div>
+    <button class="contact__form-submit">Send Message</button>
+  </form>
+</section>
+
+<style lang="scss">
+  @import '../scss/main';
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: min(100%, 1024px);
+    margin-inline: auto;
+    padding: 100px 0;
+
+    @include mq(sm) {
+      padding: 60px 0;
+    }
+  }
+
+  .contact__form {
+    text-align: center;
+  }
+  .contact__form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .contact__form-input {
+    height: 70px;
+    padding: 0 40px;
+    border: 1px solid var(--color-primary);
+    border-radius: 4px;
+    color: var(--color-section-headtext);
+
+    @include mq(sm) {
+      height: 60px;
+      padding: 0 20px;
+    }
+  }
+  .contact__form-input::placeholder {
+    color: var(--color-basetext);
+  }
+  .contact__form-textarea {
+    height: 210px;
+    padding: 40px;
+    border: 1px solid var(--color-primary);
+    border-radius: 4px;
+    color: var(--color-section-headtext);
+
+    @include mq(sm) {
+      height: 180px;
+      padding: 20px;
+    }
+  }
+  .contact__form-textarea::placeholder {
+    color: var(--color-basetext);
+  }
+
+  .contact__form-submit {
+    font-size: clamp(rem(14), 5vw, rem(16));
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--color-section-headtext);
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    border-radius: 999px;
+    padding: 16px 28px;
+    transition: var(--transition);
+    margin-top: 80px;
+
+    @include hover() {
+      &:hover {
+        color: var(--color-primary);
+        background-color: transparent;
+      }
+    }
+
+    @include mq(sm) {
+      margin-top: 40px;
+    }
+  }
+</style>
