@@ -197,8 +197,11 @@ const worksCard: WorksCard = [
     letter-spacing: 0.08em;
     color: var(--color-primary);
     transition: var(--transition);
-  }
-  .works__more-btn:hover {
-    background-color: var(--color-primary-hover);
+
+    @include hover() {
+      &:hover {
+        background-color: var(--color-primary-hover);
+      }
+    }
   }
 </style>
