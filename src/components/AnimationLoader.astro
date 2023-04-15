@@ -1,0 +1,46 @@
+<div class="lottie__container">
+  <div class="lottie"></div>
+</div>
+
+<style lang="scss">
+  .lottie__container {
+    width: 100%;
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 99;
+    background-color: var(--color-background-body);
+    transition: var(--transition);
+  }
+
+  .lottie {
+    width: calc(100% / 2);
+    height: calc(100% / 2);
+  }
+</style>
+
+<script>
+  import lottie from 'lottie-web';
+
+  // lottie animation
+  lottie.loadAnimation({
+    container: document.querySelector('.lottie'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'lottie.json',
+  });
+
+  // ローディング中は画面スクロールさせない
+  window.addEventListener('load', () => {
+    document.body.style.overflow = 'hidden';
+
+    setTimeout(() => {
+      const lottie = document.querySelector('.lottie__container') as HTMLElement;
+      lottie.style.display = 'none';
+      document.body.style.overflow = 'visible';
+    }, 2000);
+  });
+</script>
