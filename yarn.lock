@@ -2495,6 +2495,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lottie-web@npm:^5.11.0":
+  version: 5.11.0
+  resolution: "lottie-web@npm:5.11.0"
+  checksum: 4f9c86c7cf0280ccb4380b826213719122a227f50e27e5d6943dff2f05dfe4e569bd8a358a0cb9c96cbdf62f9d70b883b5cb5ec50ecb7a1eed794c5ce5a1e38a
+  languageName: node
+  linkType: hard
+
 "lru-cache@npm:^5.1.1":
   version: 5.1.1
   resolution: "lru-cache@npm:5.1.1"
@@ -3909,6 +3916,7 @@ __metadata:
   dependencies:
     astro: ^2.0.17
     gsap: ^3.11.5
+    lottie-web: ^5.11.0
     prettier: ^2.8.4
     prettier-plugin-astro: ^0.8.0
     sass: ^1.58.3
