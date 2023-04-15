@@ -1,14 +1,16 @@
 <section class="hero">
-  <h1 class="hero__title">Hi, my name is</h1>
-  <h2 class="hero__subtitle">KitamuraDev.</h2>
-  <h3 class="hero__description">Frontend Developer.</h3>
-  <p class="hero__text">
+  <h1 class="hero__title fade-in__hero">Hi, my name is</h1>
+  <h2 class="hero__subtitle fade-in__hero">KitamuraDev.</h2>
+  <h3 class="hero__description fade-in__hero">Frontend Developer.</h3>
+  <p class="hero__text fade-in__hero">
     Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio
     <span class="hero__text--color-primary">mattis</span>. Class aptent taciti sociosqu ad litora torquent per conubia
     nostra, per inceptos <span class="hero__text--color-primary">himenaeos</span>. Curabitur tempus urna at turpis
     condimentum lobortis.
   </p>
-  <a href="/#contact" class="hero__cta" aria-label="contact">Contact Me</a>
+  <div class="hero__cta-wrapper fade-in__hero">
+    <a href="/#contact" class="hero__cta" aria-label="contact">Contact Me</a>
+  </div>
 </section>
 
 <style lang="scss">
@@ -61,6 +63,7 @@
   }
 
   .hero__cta {
+    display: inline-block;
     text-decoration: none;
     color: var(--color-primary);
     border: 1px solid var(--color-primary);
@@ -79,3 +82,19 @@
     }
   }
 </style>
+
+<script>
+  import gsap from 'gsap';
+
+  gsap
+    .timeline({
+      delay: 3,
+    })
+    .from('.fade-in__hero', {
+      opacity: 0,
+      y: 10,
+      duration: 0.5,
+      ease: 'power2.inOut',
+      stagger: 0.2,
+    });
+</script>

@@ -1,5 +1,5 @@
 <!-- prettier-ignore -->
-<div class="side-social-icons">
+<div class="side-social-icons fade-in__icons">
   <ul class="side-social-icons__list">
     <li class="side-social-icons__item">
       <a href="https://github.com/kitamuraDev" class="side-social-icons__link" aria-label="GitHub" target="_blank" rel="noreferrer">
@@ -82,3 +82,14 @@
     }
   }
 </style>
+
+<script>
+  import gsap from 'gsap';
+
+  gsap.from('.fade-in__icons', {
+    opacity: 0,
+    duration: 1,
+    delay: 4.15,
+    ease: 'power2.inOut',
+  });
+</script>
