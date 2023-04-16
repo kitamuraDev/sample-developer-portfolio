@@ -1,0 +1,60 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Page Not Found - KitamuraDev">
+  <div id="content">
+    <main class="content">
+      <h1 class="content__title">404</h1>
+      <h2 class="content__sub-title">Page Not Found</h2>
+      <a href="/" class="go-home__btn" aria-label="Go Home Button">Go Home</a>
+    </main>
+    <Footer />
+  </div>
+</Layout>
+
+<style lang="scss">
+  @import '../scss/main';
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: calc(100svh - 177px);
+    transform: translateY(40px);
+
+    @include mq(sm) {
+      height: calc(100svh - 94.5px);
+    }
+  }
+  .content__title {
+    color: var(--color-primary);
+    font-size: clamp(rem(100), 25vw, rem(200));
+  }
+  .content__sub-title {
+    color: var(--color-section-headtext);
+    font-size: clamp(rem(20), 5vw, rem(32));
+    font-weight: 400;
+    margin-bottom: 40px;
+  }
+
+  .go-home__btn {
+    text-decoration: none;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    border-radius: 4px;
+    font-size: rem(14);
+    letter-spacing: 0.08em;
+    transition: var(--transition);
+    padding: 16px 28px;
+    text-align: center;
+
+    @include hover() {
+      &:hover {
+        background-color: var(--color-primary-hover);
+      }
+    }
+  }
+</style>
