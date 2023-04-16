@@ -8,7 +8,7 @@ const menuAisde = 8;
 ---
 
 <header class="header">
-  <nav class="header__nav">
+  <nav class="header__nav fade-in__header">
     <!-- ヘッダーロゴ -->
     <a href="/" aria-label="home" class="header__nav__home-link">
       <Logo />
@@ -274,7 +274,17 @@ const menuAisde = 8;
   }
 </style>
 
-<script is:inline type="module">
+<script>
+  import gsap from 'gsap';
+
+  gsap.from('.fade-in__header', {
+    opacity: 0,
+    y: -100,
+    duration: 1,
+    delay: 2,
+    ease: 'power2.inOut',
+  });
+
   const menuBtn = document.querySelector('.header__menu__btn');
   const menuAside = document.querySelector('.header__menu__aside');
   menuBtn.addEventListener('click', () => {
