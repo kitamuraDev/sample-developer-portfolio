@@ -8,18 +8,18 @@ const menuAisde = 8;
 ---
 
 <header class="header">
-  <nav class="header__nav fade-in__header">
+  <nav class="header__nav">
     <!-- ヘッダーロゴ -->
-    <a href="/" aria-label="home" class="header__nav__home-link">
+    <a href="/" aria-label="home" class="header__nav__home-link fade-in__header">
       <Logo />
     </a>
 
     <!-- ヘッダーナビゲーション -->
     <ol class="header__nav-list">
-      <li class="header__nav-list__item"><a href="/#about">About</a></li>
-      <li class="header__nav-list__item"><a href="/#skills">Skills</a></li>
-      <li class="header__nav-list__item"><a href="/#works">Works</a></li>
-      <li class="header__nav-list__item"><a href="/#contact">Contact</a></li>
+      <li class="header__nav-list__item fade-in__header"><a href="/#about">About</a></li>
+      <li class="header__nav-list__item fade-in__header"><a href="/#skills">Skills</a></li>
+      <li class="header__nav-list__item fade-in__header"><a href="/#works">Works</a></li>
+      <li class="header__nav-list__item fade-in__header"><a href="/#contact">Contact</a></li>
     </ol>
 
     <div class="header__menu">
@@ -277,12 +277,12 @@ const menuAisde = 8;
 <script>
   import gsap from 'gsap';
 
-  gsap.from('.fade-in__header', {
+  gsap.timeline({ delay: 2 }).from('.fade-in__header', {
     opacity: 0,
-    y: -100,
-    duration: 1,
-    delay: 2,
+    y: -30,
+    duration: 0.5,
     ease: 'power2.inOut',
+    stagger: 0.2,
   });
 
   const menuBtn = document.querySelector('.header__menu__btn');

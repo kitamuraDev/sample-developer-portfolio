@@ -86,15 +86,11 @@
 <script>
   import gsap from 'gsap';
 
-  gsap
-    .timeline({
-      delay: 3,
-    })
-    .from('.fade-in__hero', {
-      opacity: 0,
-      y: 10,
-      duration: 0.5,
-      ease: 'power2.inOut',
-      stagger: 0.2,
-    });
+  gsap.timeline({ delay: 3.3 }).from('.fade-in__hero', {
+    opacity: 0,
+    y: 10,
+    duration: 0.5,
+    ease: 'power2.inOut',
+    stagger: 0.2,
+  });
 </script>
