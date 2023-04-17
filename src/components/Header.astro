@@ -317,19 +317,4 @@ const menuAisde = 8;
       document.body.classList.remove('blur');
     });
   });
-
-  // スクロールに応じてヘッダーの 表示/非表示 を制御
-  let prevScrollPos = window.pageYOffset;
-
-  window.addEventListener('scroll', () => {
-    let currentScrollPos = window.pageYOffset;
-    if (prevScrollPos > currentScrollPos) {
-      // 上にスクロールしている場合、ヘッダーを表示する
-      document.querySelector('header').style.top = '0';
-    } else {
-      // 下にスクロールしている場合、ヘッダーを非表示にする
-      document.querySelector('header').style.top = '-100px';
-    }
-    prevScrollPos = currentScrollPos;
-  });
 </script>
